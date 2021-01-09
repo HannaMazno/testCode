@@ -184,7 +184,92 @@ h1, h2, h3, h4 h5 {
 	
 }
 
+
+
 /* ******************wish_items ************/
+.product {
+	min-width: 250px;
+	min-height: 370px;
+	border: #eeeeee solid 1px;
+	text-align: center;
+}
+
+.product-visual {
+	position: relative;
+	min-height: 270px;
+}
+
+.product-visual:hover {
+	background-color: #313131;
+}
+
+.product-visual:hover .hover-block {
+	display: block;
+}
+
+.product-visual img {
+	max-width: 100%;
+	/* max-height: auto; */
+	display: block;
+}
+
+.hover-block {
+	display: none;
+	
+}
+
+.hover-block button {
+	border: solid 4px #ffffff;
+	color:#ffffff;
+	background-color: #313131;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.product h3 {
+	text-transform: uppercase;
+	color: #222222;
+	margin-bottom: 13px;
+}.product-price {
+	margin-bottom: 30px;
+}
+
+.product-price strong {
+	color:orangered;
+	margin-right: 10px;
+}
+
+.product-price span {
+	color: #a2a2a2;
+	text-decoration: line-through;
+}
+
+.product-action {
+	margin: 0, auto;
+}
+
+.btn-action {
+	display: inline-block;
+    color: #444444;
+	width:40px ;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px; 
+    font-size: 20px;
+	font-family: sans-serif;
+	border: #eeeeee solid 1px;
+	transition: 0.2s linear;
+}
+
+.btn-action:hover {
+	background-color: #e24545;
+	color:#fff;
+}
+
+
+
+
+
 
 .wish_items {
 	margin-top: 150px;
@@ -246,10 +331,6 @@ h1, h2, h3, h4 h5 {
 .button:hover {
 	background-color: #e24545;
 	color:#fff;
-}
-
-.button:active {
-	background-color: #080808;
 }
 
 .button_pos {
