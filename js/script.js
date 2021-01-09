@@ -44,44 +44,12 @@ function sliderMove () {
 
 
 
+const picture = document.querySelectorAll('.ho_item img');
 
 
-
-// const newItem = document.createElement('div');
-// newItem.classList.add('.ho_item');
-// wraper.append(newItem);
-
-    
-
-
-// function addBlackFon (item) {
-   
-//             if( !item.classList.contains('ho_item_delite ')) {
-//                 item.classList.add('ho_item_delite');
-//             } else {
-//                 item.classList.remove('ho_item_delite');
-//             }
-//       }
 
     
    
     
 
 
-// items[0].addEventListener('click', () => {
-//       if( !items[3].classList.contains('ho_item_delite ')) {
-//           items[3].classList.add('ho_item_delite');
-//       } else {
-//           items[3].classList.remove('ho_item_delite');
-//       }
-// });
-
-// items.forEach((item) => {
-//     addEventListener('click', () => {
-//         if( !item.classList.contains('ho_item_delite ')) {
-//             item.classList.add('ho_item_delite');
-//         } else {
-//             item.classList.remove('ho_item_delite');
-//         }
-//     });
-// });

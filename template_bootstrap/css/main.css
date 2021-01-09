@@ -13,18 +13,11 @@ h1, h2, h3, h4 h5 {
 	margin: 0;
 }
 
-
-
-
-
-
-
 .header span {
 	text-transform: uppercase;
 	color: #222222;
 	font-size: 25px;
 }
-
 
 .header h4 {
 	color: #777777;
@@ -32,27 +25,19 @@ h1, h2, h3, h4 h5 {
 	font-size: 18px;
 	letter-spacing: 13px;
 	margin-top: -10px;
-	
-
 }
 
 .strong_title{
 	display: block;
 	color:#e24545;
-	
 	font-size: 28px;
 	font-weight: 700;
-
-	
 }
-
-
-
-
 
 .top_logo {
 	position: relative;
 }
+
 .top_menu 
    a {
 	color: #444444;
@@ -61,41 +46,7 @@ h1, h2, h3, h4 h5 {
 	text-transform: uppercase;
 	position: relative;
 	padding-right: 4px;
-}.top_cart {
-	border: 3px solid #444444;
-	width: 135px;
-	height: 45px;
-	position: relative;
 }
-
-.tc_img {
-	position: absolute;
-	right:  -10px;
-	bottom: 6px;
-}
-
-.tc_bag {
-	position: absolute;
-	left: 18px;
-	top: 8px;
-}
-
-.tc_text {
-	color:#e24545;
-	font-size: 30px;
-}
-
-.wish_number {
-	color:white;
-	position: absolute;
-	z-index: 5;
-	right: -5px;
-	top: 8px;
-}
-
-
-
-
 
 .top_menu li {
 	display: inline-block;
@@ -107,6 +58,7 @@ h1, h2, h3, h4 h5 {
 .top_menu li:hover a {
   color: #e45858;
 }
+
 .top_menu li.active a::after {
 	content: "";
 	position: absolute;
@@ -118,76 +70,85 @@ h1, h2, h3, h4 h5 {
 	bottom: -8px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.s_black h2::before {
-	content: "";
-	position: absolute;
-	width: 50px;
-	height: 20px;
-	background-image: url(/images/lines.icon.png);
-	top: 17px;
-    left: 134px;
-
+.top_cart {
+	border: 3px solid #444444;
+	width: 135px;
+	height: 45px;
+	position: relative;
 }
 
-.s_black h2::after {
-	content: "";
+.item_amount {
+	color:white;
 	position: absolute;
-	width: 50px;
-	height: 20px;
-	background-image: url(/images/lines.icon.png);
-	background-position: -48px 20px;
-    top: 17px;
-    right: 134px;
-	
+	z-index: 5;
+	right: -5px;
+	top: 8px;
 }
 
+.tc_circle {
+	position: absolute;
+	right:  -10px;
+	bottom: 6px;
+}
 
+.tc_bag {
+	position: absolute;
+	left: 18px;
+	top: 8px;
+}
 
+.dropdown {
+	position: relative;
+    display: inline-block;
+}
 
-	
+.dropdown_content {
+	position: absolute;
+	display: none;
+	z-index: 1;
+}
 
+.dropdown:hover .dropdown_content {
+	display: block;
+}
 
-/* .container {
-	
-} */
-/* .mc_item_wrap:active {
-	background-color: #2a2a2a;
-} */
+.dropdown_item {
+	color: #d41818;
+}
 
+.dropdown_item:hover {
+	color: #0a0000;
+}
+
+.dropdown_content a {
+	color: #f00f0f;
+}
 .toggle {
 	position: relative;
-	
 }
 
 .toggle_img {
 	position: absolute;
-	right: 95px;
-	top: 8px;
+	right: -6px;
+	top: 10px;
 }
-/* my_wi */
-/* test block picture */
 
-.my_wishlist {
+/* wishlist_line */
+
+.wishlist_line {
 	background-image: url(/images/Layer-58.jpg);
 	height: 150px;
 	
 }
-.clear_list_btn {
-	display: flex;
-	align-items: flex-end;
-}
 
+.md_link a {
+	color: #444444;
+	text-transform: uppercase;
+	font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
 .wish_wraper {
 	display: flex;
@@ -203,9 +164,32 @@ h1, h2, h3, h4 h5 {
 	color: #222222;
 
 }
+/* clear_list_button */
+.clear_btn {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 55px;
+}
+
+.cl_list_btn {
+	width: 140px;
+	height: 40px;
+	border: 2px solid #444444;
+	color: #858585;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+
+/* ******************wish_items ************/
+
 .wish_items {
 	margin-top: 150px;
 }
+
 .ho_item img {
 	max-width: 100%;
 	margin:15px auto ;
@@ -217,12 +201,10 @@ h1, h2, h3, h4 h5 {
 	padding-top: 30px ;
 	margin-bottom: 20px;
 	height: 410px;
-
-	/* padding-right: 20px;
-	padding-left: 20px; */
 }
 
 .ho_item_delite {
+	display: none;
 	border: #eeeeee solid 1px;
 	text-align: center;
 	padding-top: 30px ;
@@ -250,13 +232,11 @@ h1, h2, h3, h4 h5 {
 
 .button {
 	display: inline-block;
-    
-	color: #444444;
+    color: #444444;
 	width:40px ;
     height: 40px;
     vertical-align: middle;
     line-height: 40px; 
-    
     font-size: 20px;
 	font-family: sans-serif;
 	border: #eeeeee solid 1px;
@@ -276,7 +256,7 @@ h1, h2, h3, h4 h5 {
   margin-bottom: 0;
 }
 
-/* pagination */
+/*********************** pagination */
 
 .pagination {
 	margin-top: 85px;
@@ -286,10 +266,7 @@ h1, h2, h3, h4 h5 {
 
 .pagination_btn {
 	display: inline-block;
-	
-    
-	color: #444444;
-	
+    color: #444444;
 	height: 40px;
 	width: 23px;
     vertical-align: middle;
@@ -308,13 +285,13 @@ h1, h2, h3, h4 h5 {
 	
 }
 
-/* store_features */
+/******************* store_features */
+
 .store_features {
 	border-top: #eeeeee solid 1px;
 }
 
 .store_features ul {
-	
 	list-style: none;
 }
 
@@ -333,29 +310,8 @@ h1, h2, h3, h4 h5 {
 }
 
 .store_item {
-	/* background-image: url(/images/blog_test.jpg);
-	background-repeat:no-repeat;
-	background-position: 10px 10px; */
 	text-align: left ;
 	margin-right: 35px;
-}
-
-/* .store_item h2 {
-	text-transform: uppercase;
-}
-
-.store_features li:nth-child(2) div {
-	background-repeat:no-repeat;
-
-}
-
-.store_features li:nth-child(3) div {
-  
-} */
-
-.store_features li:nth-child(4) div {
-	
-	background-position: 12px 2px;
 }
 
 .sf_link {
@@ -364,11 +320,8 @@ h1, h2, h3, h4 h5 {
 
 }
 
-/* footer */
-/* .form-content {
-    display: flex;
-    justify-content: space-between;
-} */
+/* ****footer********* */
+
 .footer_subscribe {
 	padding-top: 65px;
 }
@@ -378,6 +331,7 @@ h1, h2, h3, h4 h5 {
 	color: #0a0000;
 	font-weight: 700;
 }
+
 .footer_up {
   height: 200px;
   background-color: #f6f6f6;
@@ -398,83 +352,28 @@ h1, h2, h3, h4 h5 {
 	height: 50px;
 	text-align: center;
 }
-    
-
-
-
-
+	
 .input {
-    /* display: block; */
     width: 440px;
     height: 50px;
     border: 1px solid #999999;
-
     font-size: 23px;
     font-family: inherit;
-   
-    
     text-align: center;
     color: rgb(55 52 54);
-    
-   
-    
     text-align: center;
-    
-    
 }
 
 .input:focus {
     border-color: lawngreen;
 }
 
-.text {
-    width: 275px;
-    height: 45px;
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: 400;
-    margin-right: 10px;
-}
-
 .ft_btns {
     display: inline-block;
 }
 
-/* wish_menu */
-.menu_drop {
-	
-	position: relative;
-}
 
-.md_link a {
-	
-    color: #444444;
-	text-transform: uppercase;
-	font-weight: 700;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 
-.mdl_content a {
-	color: #444444;
-	text-transform: uppercase;
-	font-weight: 700;
-    font-size: 16px;
-    border: none;
-	cursor: pointer;
-	
-}
 
-.mdl_content {
-	position: absolute;
-	display: none;
 
-}
-.show {
-	display: inline-block;
-}
 
-.dropdown_menu {
-	display: none;
-}
