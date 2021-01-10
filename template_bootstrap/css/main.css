@@ -34,10 +34,20 @@ h1, h2, h3, h4 h5 {
 	font-weight: 700;
 }
 
-.top_logo {
+.top-logo {
 	position: relative;
 }
 
+.top-logo::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background-color: #e45151;
+	position: absolute;
+	left: 0;
+	bottom: 19px;
+}
 .top_menu 
    a {
 	color: #444444;
@@ -62,8 +72,8 @@ h1, h2, h3, h4 h5 {
 .top_menu li.active a::after {
 	content: "";
 	position: absolute;
-	width: 13px;
-	height: 4px;
+	width: 10px;
+	height: 2px;
 	background-color: #e45151;
 	position: absolute;
 	left: 0;
@@ -106,6 +116,9 @@ h1, h2, h3, h4 h5 {
 	position: absolute;
 	display: none;
 	z-index: 1;
+	top: 0px;
+    right: -115px;
+
 }
 
 .dropdown:hover .dropdown_content {
@@ -121,7 +134,8 @@ h1, h2, h3, h4 h5 {
 }
 
 .dropdown_content a {
-	color: #f00f0f;
+	color: #888888;
+	text-transform: uppercase;
 }
 .toggle {
 	position: relative;
@@ -133,10 +147,30 @@ h1, h2, h3, h4 h5 {
 	top: 10px;
 }
 
+.tm-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.tm-dropdown-content {
+	position: absolute;
+	
+	/* display: none; */
+}
+
+.tm-dropdown-content a {
+	color:#1f1d1d;
+	
+}
+
+.tm-dropdown:hover .tm-dropdown-content a {
+    color:black;
+}
+
 /* wishlist_line */
 
 .wishlist_line {
-	background-image: url(/images/Layer-58.jpg);
+	background-image: url("/template_bootstrap/img/Layer-58.jpg");
 	height: 150px;
 	
 }
@@ -169,24 +203,38 @@ h1, h2, h3, h4 h5 {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 55px;
+	position: relative;
+	margin-bottom: 45px;
 }
 
 .cl_list_btn {
 	width: 140px;
 	height: 40px;
 	border: 2px solid #444444;
-	color: #858585;
+	color: #444444;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 400;
+	font-size: 16px;
 	padding-left: 20px;
 	padding-right: 20px;
+	background-color: #fff;
+
 	
 }
 
+.wish_list-search {
+	display: none;
+	position: absolute;
+	right: 180px;
+	top: 60px
+}
 
 
 /* ******************wish_items ************/
+.wraper {
+	margin-bottom: 50px;
+}
 .product {
 	min-width: 250px;
 	min-height: 370px;
@@ -194,49 +242,90 @@ h1, h2, h3, h4 h5 {
 	text-align: center;
 }
 
+
+
 .product-visual {
 	position: relative;
 	min-height: 270px;
+	padding-top: 30px;
 }
 
-.product-visual:hover {
-	background-color: #313131;
+.product-cover {
+	position: absolute;
+	display: none;
+	min-height: 270px;
+	padding-left: 35px;
+	padding-top: 104px;
+	background-color:#0a0000;
+
 }
 
-.product-visual:hover .hover-block {
+.btn-action:hover {
+	background-color: #e24545;
+	color:#fff;
+}
+
+/* .product:hover {
+	background: #0a0000;
+}  */
+
+.product:hover .product-cover {
 	display: block;
+	bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+	z-index: 1;
+	opacity: 0.8;
 }
+
 
 .product-visual img {
 	max-width: 100%;
-	/* max-height: auto; */
+	max-height: 100%;
+}
+
+.product-name ::before {
+	content: "";
+    width: 12px;
+    height: 3px;
+    background-color: #d41818;
 	display: block;
+	position: absolute;
+    bottom: 167px;
+    right: 139px;
 }
 
-.hover-block {
-	display: none;
-	
-}
 
-.hover-block button {
+
+.product-cover button {
 	border: solid 4px #ffffff;
 	color:#ffffff;
-	background-color: #313131;
+	background-color:#0a0000;
 	text-transform: uppercase;
 	text-align: center;
+	margin-right: 40px;
 }
 
 .product h3 {
 	text-transform: uppercase;
 	color: #222222;
 	margin-bottom: 13px;
-}.product-price {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.product-price {
 	margin-bottom: 30px;
 }
 
 .product-price strong {
 	color:orangered;
 	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .product-price span {
@@ -255,64 +344,16 @@ h1, h2, h3, h4 h5 {
     height: 40px;
     vertical-align: middle;
     line-height: 40px; 
-    font-size: 20px;
+    font-size: 14px;
 	font-family: sans-serif;
 	border: #eeeeee solid 1px;
 	transition: 0.2s linear;
+	background-color: #fff;
 }
 
-.btn-action:hover {
+.product:hover .btn-action {
 	background-color: #e24545;
 	color:#fff;
-}
-
-
-
-
-
-
-.wish_items {
-	margin-top: 150px;
-}
-
-.ho_item img {
-	max-width: 100%;
-	margin:15px auto ;
-}
-
-.ho_item {
-	border: #eeeeee solid 1px;
-	text-align: center;
-	padding-top: 30px ;
-	margin-bottom: 20px;
-	height: 410px;
-}
-
-.ho_item_delite {
-	display: none;
-	border: #eeeeee solid 1px;
-	text-align: center;
-	padding-top: 30px ;
-	margin-bottom: 20px;
-	height: 410px;
-	background-color:rgba(20, 19, 19, 0.705);
-}
-
-.ho_item span {
-	color:orangered;
-	margin-right: 10px;
-}
-
-.ho_item strong {
-	color: #a2a2a2;
-	text-decoration: line-through;
-}
-
-.ho_item h3 {
-
-	text-transform: uppercase;
-	color: #222222;
-	margin-top: 10px;
 }
 
 .button {
@@ -348,12 +389,12 @@ h1, h2, h3, h4 h5 {
 .pagination_btn {
 	display: inline-block;
     color: #444444;
-	height: 40px;
-	width: 23px;
+	min-height: 40px;
+	min-width: 30px;
     vertical-align: middle;
-    line-height: 35px;
-    padding: 0 20px;
-    font-size: 20px;
+	line-height: 35px;
+	padding: 0 5px;
+    font-size: 12px;
 	font-family: sans-serif;
 	border: #dddddd solid 3px;
 	transition: 0.2s linear;
@@ -379,8 +420,9 @@ h1, h2, h3, h4 h5 {
 .store_features li {
 	display: inline-block;
 }
+/* slider */
 
-.store_wrap {
+.slider {
 	text-align: center;
 	padding-left:  0;
 	border:#444444 solid 3px;
@@ -388,23 +430,53 @@ h1, h2, h3, h4 h5 {
 	margin-top: 95px;
 	padding-bottom: 20px;
 	left: 0;
+	display: flex;
+	text-align: center;
+	position: relative;
 }
 
-.store_item {
+.slider-line {
+	position: absolute;
+    width: 1100px;
+    height: 3px;
+    background-color: #fff;
+    top: 94px;
+    right: 34px;
+    z-index: 1;
+}
+.slider-item {
 	text-align: left ;
-	margin-right: 35px;
-}
+	position: relative;
+	padding-left: 50px;
+	}
 
-.sf_link {
+.sf-link {
 	color: #575757;
 	font-size: 16px;
+}
 
+.slider-link a::after {
+	content: "";
+    width: 12px;
+    height: 3px;
+    background-color: #d41818;
+	display: block;
+	position: absolute;
+    bottom: 167px;
+    right: 139px;
+}
+
+.slider-img {
+	position: absolute;
+	top: 3px;
+    left: 12px;
 }
 
 /* ****footer********* */
 
 .footer_subscribe {
 	padding-top: 65px;
+	
 }
 
 .ft_text {
@@ -424,7 +496,10 @@ h1, h2, h3, h4 h5 {
 .footer-end {
     height: 200px;
     background-color: #e6e6e6;
-    opacity: 0.8;
+	opacity: 0.8;
+	padding-top: 30px;
+	display: flex;
+	align-self: center;
 }
 
 .footer_subscribe a.button {
@@ -432,6 +507,14 @@ h1, h2, h3, h4 h5 {
 	width: 50px;
 	height: 50px;
 	text-align: center;
+}
+
+.col-picture {
+	padding-right: 10px;
+}
+
+.copy-img :last-child {
+	padding-right: 0;
 }
 	
 .input {
