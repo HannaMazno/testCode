@@ -4,8 +4,8 @@
 $(document).ready(function(){
     $('.slider').slick({
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 4
     });
   });
 
@@ -14,3 +14,4 @@ $(document).ready(function(){
    clearListBtn.addEventListener('click', ()=> {
          searchFeald.classList.add('show');
    });
+

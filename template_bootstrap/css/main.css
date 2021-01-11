@@ -154,19 +154,21 @@ h1, h2, h3, h4 h5 {
 
 .tm-dropdown-content {
 	position: absolute;
-	
-	/* display: none; */
+	display: none;
 }
 
 .tm-dropdown-content a {
 	color:#1f1d1d;
-	
 }
 
 .tm-dropdown:hover .tm-dropdown-content a {
-    color:black;
+	color:black;
+	background-color: #888888;
 }
 
+.tm-dropdown:hover .tm-dropdown-content {
+    display: block;
+}
 /* wishlist_line */
 
 .wishlist_line {
@@ -256,7 +258,7 @@ h1, h2, h3, h4 h5 {
 	min-height: 270px;
 	padding-left: 35px;
 	padding-top: 104px;
-	background-color:#0a0000;
+	background-color: rgb(0, 0, 0, 0.8);
 
 }
 
@@ -285,7 +287,7 @@ h1, h2, h3, h4 h5 {
 	max-height: 100%;
 }
 
-.product-name ::before {
+.product-name::before {
 	content: "";
     width: 12px;
     height: 3px;
@@ -390,7 +392,7 @@ h1, h2, h3, h4 h5 {
 	display: inline-block;
     color: #444444;
 	min-height: 40px;
-	min-width: 30px;
+	min-width: 40px;
     vertical-align: middle;
 	line-height: 35px;
 	padding: 0 5px;
@@ -411,6 +413,7 @@ h1, h2, h3, h4 h5 {
 
 .store_features {
 	border-top: #eeeeee solid 1px;
+	padding-top: 100px;
 }
 
 .store_features ul {
@@ -424,35 +427,82 @@ h1, h2, h3, h4 h5 {
 
 .slider {
 	text-align: center;
-	padding-left:  0;
+	padding: 10px 50px;
 	border:#444444 solid 3px;
+	border-top: none;
 	height: 120px;
-	margin-top: 95px;
-	padding-bottom: 20px;
+	/* margin-top: 95px;
+	padding-bottom: 20px; */
 	left: 0;
 	display: flex;
 	text-align: center;
 	position: relative;
 }
 
-.slider-line {
-	position: absolute;
-    width: 1100px;
+.slider::before {
+	content: "";
+    width: 20px;
     height: 3px;
-    background-color: #fff;
-    top: 94px;
-    right: 34px;
-    z-index: 1;
+    background-color: #444444;
+	display: block;
+	position: absolute;
+    top: 0;
+    right: -1px;
+}
+
+.slider::after {
+	content: "";
+    width: 20px;
+    height: 3px;
+    background-color: #444444;
+	display: block;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-icon {
+	font-size: 32px;
+	position: absolute;
+	left: -4px;
+    top: -4px;
+}
+
+.slider-item h2 {
+	font-size: 16px;
+	/* padding-bottom: 12px; */
+	text-transform: uppercase;
+	color: #222222;
+}
+
+.slider-item p {
+	font-size: 12px;
+	color: #444444;
+
+}
+
+.slider p::before {
+	content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #cccccc;
+	display: block;
+	position: absolute;
+    bottom: 0;
+    left: 52px;
 }
 .slider-item {
 	text-align: left ;
 	position: relative;
 	padding-left: 50px;
+	border: none;
+	outline: none;
 	}
 
 .sf-link {
 	color: #575757;
 	font-size: 16px;
+	outline: none;
 }
 
 .slider-link a::after {
@@ -466,11 +516,6 @@ h1, h2, h3, h4 h5 {
     right: 139px;
 }
 
-.slider-img {
-	position: absolute;
-	top: 3px;
-    left: 12px;
-}
 
 /* ****footer********* */
 
@@ -483,6 +528,7 @@ h1, h2, h3, h4 h5 {
 	text-transform: uppercase;
 	color: #0a0000;
 	font-weight: 700;
+	font-size: 12px;
 }
 
 .footer_up {
@@ -494,7 +540,7 @@ h1, h2, h3, h4 h5 {
 }
 
 .footer-end {
-    height: 200px;
+    height: 100px;
     background-color: #e6e6e6;
 	opacity: 0.8;
 	padding-top: 30px;
